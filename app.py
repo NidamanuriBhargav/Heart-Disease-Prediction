@@ -10,7 +10,7 @@ diaBP=st.number_input('Enter Diastolic Blood Pressure:')
 BMI=st.number_input('Enter Body Mass Index:')
 heartRate=st.number_input('Enter Resting Heart Rate:')
 glucose=st.number_input('Enter Glucose levels:')
-if st.button('Predict Approval'):
+if st.button('Predict Disease'):
     prediction=model.predict([[age,cigsperday,totchol,sysBP,diaBP,BMI,heartRate,glucose]])
     if prediction=='1':
         st.text('May be there is a Heart Disease')
