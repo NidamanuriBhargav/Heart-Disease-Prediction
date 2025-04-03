@@ -12,7 +12,7 @@ heartRate=st.number_input('Enter Resting Heart Rate:')
 glucose=st.number_input('Enter Glucose levels:')
 if st.button('Predict Disease'):
     prediction=model.predict([[age,cigsperday,totchol,sysBP,diaBP,BMI,heartRate,glucose]])
-    if prediction=='Y':
+    if prediction==1:
         st.text('May be there is a Heart Disease')
     else:
         st.text("Don't have Heart Disease")
